@@ -26,12 +26,12 @@ with open("input.txt", 'r') as file:
 			elfNumber = elfNumber + 1
 			elf = Elf(elfNumber)
 
-elfPreppersTotalFood = 0
+elfPreppersTotalCalories = 0
 
 for i in range(3):
 	fatElf = max(elfDictionary, key=elfDictionary.get)	
 	print("Fattest Elf: " + str(fatElf) + " with " + str(elfDictionary[fatElf]) + " kcal")
-	elfPreppersTotalFood = elfPreppersTotalFood + elfDictionary[fatElf]
+	elfPreppersTotalCalories = elfPreppersTotalCalories + elfDictionary[fatElf]
 	del elfDictionary[fatElf]
 
-print("Calories carried by top 3 elves: " + str(elfPreppersTotalFood))
+print("Calories carried by top 3 elves: " + str(elfPreppersTotalCalories))
