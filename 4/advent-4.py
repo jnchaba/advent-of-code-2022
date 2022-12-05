@@ -32,9 +32,9 @@ with open("input.txt", 'r') as file:
 	part2 = 0
 	for line in lines:
 		strippedLine = line.strip()
-		elvesAreCompletelyWastngTime = partOneProcessLine(strippedLine)
+		elvesAreCompletelyWastingTime = partOneProcessLine(strippedLine)
 		elvesArePartiallyWastingTime = partTwoProcessLine(strippedLine)
-		if elvesAreCompletelyWastngTime:
+		if elvesAreCompletelyWastingTime:
 			part1 = part1 + 1
 		if elvesArePartiallyWastingTime:
 			part2 = part2 + 1
