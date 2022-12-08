@@ -4,7 +4,6 @@ class File:
 		self.size = int(size)
 		self.parent = parent
 		self.parent.updateSize(int(size))
-
 class Directory:
 	def __init__(self, name, parent=None):
 		self.name = name
