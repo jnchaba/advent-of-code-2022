@@ -4,8 +4,7 @@ mostScenicTree = 0
 
 def isVisible(left, right, top, bottom):
 	global totalVisibleTrees
-	if (max(left) < tree or max(right) < tree or
-		max(top) < tree or max(bottom) < tree):
+	if (max(left) < tree or max(right) < tree or max(top) < tree or max(bottom) < tree):
 		totalVisibleTrees += 1
 
 def calculateScenery(tree, left, right, top, bottom):
@@ -38,9 +37,8 @@ def calculateScenery(tree, left, right, top, bottom):
 		elif bottom[b] >= tree:
 			bottomScore += 1
 			break
-	scenicness = leftScore * rightScore * topScore * bottomScore
-	if scenicness > mostScenicTree: 
-		mostScenicTree = scenicness
+	if (leftScore * rightScore * topScore * bottomScore) > mostScenicTree: 
+		mostScenicTree = (leftScore * rightScore * topScore * bottomScore)
 
 with open("input.txt", 'r') as file:
 	lines = file.readlines()
@@ -49,7 +47,6 @@ with open("input.txt", 'r') as file:
 	for r in range(len(grid)):
 		for c in range(len(grid[0])):
 			tree = grid[r][c]
-			treeScenicness = 0
 			leftTrees = grid[r][:c]
 			rightTrees = grid[r][c+1:]
 			topTrees = [grid[row][c] for row in range(r)]
